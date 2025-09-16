@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean Waste Solutions | Professional Waste Removal Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601044777204-c80b9a5408a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 100, 0, 0.1);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <!-- Logo -->
+                    <div class="flex items-center py-4 px-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-trash-alt text-3xl text-green-600 mr-2"></i>
+                            <span class="font-semibold text-gray-800 text-2xl">Galaktika</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Primary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="py-4 px-2 text-green-600 border-b-4 border-green-600 font-semibold">Əsas</a>
+                    <a href="#services" class="py-4 px-2 text-gray-600 font-semibold hover:text-green-600 transition duration-300">Xidmətlər</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-600 font-semibold hover:text-green-600 transition duration-300">Əlaqə</a>
+                    <a href="#quote" class="py-2 px-4 mx-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">Təklif alın</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li><a href="#home" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Əsas</a></li>
+                <li><a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Xidmətlər</a></li>
+                <li><a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Əlaqə</a></li>
+                <li><a href="#quote" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold text-green-600">Təklif alın</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero py-32">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Tullantıların utilizasiyası üçün effektiv həllər</h1>
+            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Evlər və müəssisələr üçün peşəkar tullantıların çıxarılması. Ekoloji təmizlik və təmizliyə qulluq.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#quote" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Xidmət sifariş edin</a>
+                <a href="#services" class="bg-transparent hover:bg-white text-white hover:text-green-700 font-semibold py-3 px-6 border border-white hover:border-transparent rounded-lg transition duration-300">Xidmətlərimiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Niyə bizi seçirlər ?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Etibarlı Xidmət</h3>
+                    <p class="text-gray-600">Güvənə biləcəyiniz vaxtında pikaplar, yağış və ya parıltı. Planlaşdırılmış kolleksiyaları heç vaxt qaçırırıq.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ekoloji cəhətdən təmiz</h3>
+                    <p class="text-gray-600">Ekoloji cəhətdən məsuliyyətli utilizasiyaya və təkrar emal səylərini maksimuma çatdırmağa sadiqdir.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Dəstək</h3>
+                    <p class="text-gray-600">Bizə ehtiyac duyduğunuz zaman müstəsna müştəri xidməti mövcuddur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Xidmətlərimiz</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">İstənilən ehtiyaclar üçün hərtərəfli tullantıların çıxarılması həlləri</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Məişət tullantılarının yığılması</h3>
+                    <p class="text-gray-600 mb-4">Muqavilə əsasən götürülmə grafiki</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Standart zibil yığılması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Təkrar emal alma</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Həyət tullantılarının çıxarılması</span>
+                        </li>
+                    </ul>
+                    <a href="#quote" class="text-green-600 font-semibold inline-flex items-center">Xidməti Planlaşdır <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                
+                
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-couch text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Toplu Tullantıların Götürülməsi</h3>
+                    <p class="text-gray-600 mb-4">Standart qablara sığmayan böyük əşyalar üçün xüsusi kolleksiya.</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Mebellərin çıxarılması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Cihazın atılması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Tikinti zibilləri</span>
+                        </li>
+                    </ul>
+                    <a href="#quote" class="text-green-600 font-semibold inline-flex items-center">Xidməti Planlaşdır <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                
+                
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Lazımsız Əşyaların Çıxarılması</h3>
+                    <p class="text-gray-600 mb-4">Evinizdən və ya biznesinizdən istənilən vaxt lazımsız əşyaların götürülməsi.</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Mülk təmizlənməsi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Tikinti sahələrinin təmizlənməsi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Eyni gün xidmət mümkündür</span>
+                        </li>
+                    </ul>
+                    <a href="#quote" class="text-green-600 font-semibold inline-flex items-center">SXidməti Planlaşdır <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Müştərilərimizin rəyləri</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                    </div>
+                    <p class="mb-4 italic">"Galaktika artıq 25 ildir ki, restoranımızın tullantılarını idarə edir və heç vaxt götürülməni buraxmayıblar. Qiymətləri münasibdir və işçiləri həmişə nəzakətli və peşəkardır."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-semibold">JH</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">James Henderson</p>
+                            <p class="text-sm text-green-200">Yerel restoran sahibi</p>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- Testimonial 2 -->
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                    </div>
+                    <p class="mb-4 italic">"Təmir işlərimizdən sonra çoxlu tikinti tullantımız var idi. EcoClean konteyner gətirdi və onu tam vaxtında apardı. Yenə də istifadə edəcəyik!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-semibold">SM</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sarah Thompson</p>
+                            <p class="text-sm text-green-200">Ev sahibi</p>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- Testimonial 3 -->
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                    </div>
+                    <p class="mb-4 italic">"Onların təkrar emal proqramı çox yüksək səviyyədədir. Ekoloji cəhətdən məsuliyyətli olmaq çox asanlaşdırılıb və hesabatları bizə davamlılıq səylərimizi izləməyə kömək edir."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-semibold">DP</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">David Peterson</p>
+                            <p class="text-sm text-green-200">Ofis meneceri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="quote" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 bg-green-600 rounded-lg p-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Rahat Tullantı İdarəçiliyinə Hazırsınız?</h2>
+            <p class="text-xl text-green-100 mb-8">Bu gün pulsuz təklif alın. Heç bir öhdəlik yoxdur, yalnız əla xidmət seçimləri.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:18005551234" class="bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> İndi Zəng Edin
+                </a>
+                <a href="#contact" class="bg-transparent hover:bg-green-700 text-white hover:text-white font-semibold py-3 px-6 border border-white hover:border-transparent rounded-lg transition duration-300">
+                    Bizimlə Əlaqə
+                </a>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Bizimlə Əlaqə</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-green-600">Əlaqə üçün</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">Ünvan</h4>
+                            <p class="text-gray-600">Azerbaijan,Baku Sabail<br>Hasan Abdulayev street</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-phone-alt text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">Telefon</h4>
+                            <p class="text-gray-600">
+                                <a href="tel:18005551234" class="hover:text-green-600 transition">+994 55 286 86 15</a><br>
+                                <span class="text-sm">B.e. - C.a.: 8:00 - 17:00</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">Email</h4>
+                            <p class="text-gray-600">
+                                <a href="mailto:gasanzadegusejn@gmail.com" class="hover:text-green-600 transition">gasanzadegusejn@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-clock text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">İş saatları</h4>
+                            <p class="text-gray-600">
+                                Bazar ertəsi - Cümə: 8:00 - 17:00<br>
+                                Şənbə: 9:00 - 13:00<br>
+                                Bazar: Bağlıdır
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-green-600">Bizə Mesaj Yazın</h3>
+                
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Ad</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                    </div>
+                    
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Xidmət seçimi</label>
+                        <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                            <option value="">Xidmət seçin</option>
+                            <option value="residential">Məişət tullantılarının yığılması</option>
+                            <option value="bulk">Toplu tullantıların götürülməsi</option>
+                            <option value="junk">Lazımsız əşyaların çıxarılması</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mesaj*</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Mesajı Göndər
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="mt-16">
+            <h3 class="text-xl font-semibold mb-6 text-center text-green-600">Ünvanımız</h3>
+            <div id="map" class="rounded-lg shadow-lg overflow-hidden">
+                <!-- Map will be loaded here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.1868781066143!2d49.84472261536047!3d40.384868479368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6e6a99d2b1%3A0x8c8ec9a4b1b4b1b5!2sIcherisheher%20Metro%20Station!5e0!3m2!1sen!2sus!4v1658179870522!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="rounded-lg"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Tez-tez verilən suallar</h2>
+        
+        <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 pb-4">
+                <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-green-600 focus:outline-none">
+                    <span>Adi zibil yığımı üçün hansı əşyalar qəbul edilmir?</span>
+                    <i class="fas fa-chevron-down text-green-600 ml-2 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer mt-2 text-gray-600 hidden">
+                    Biz təhlükəli tullantıları (boyalar, kimyəvi maddələr, batareyalar), elektronika, təkərlər və ya tibbi tullantıları adi zibil xidmətimizdə qəbul etmirik. Bu əşyalar xüsusi emal tələb edir – düzgün utilizasiya üçün bizimlə əlaqə saxlayın.
+                </div>
+            </div>
+            
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 pb-4">
+                <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-green-600 focus:outline-none">
+                    <span>Xidmətlər üçün necə ödəniş edə bilərəm?</span>
+                    <i class="fas fa-chevron-down text-green-600 ml-2 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer mt-2 text-gray-600 hidden">
+                    Bir neçə rahat ödəniş variantı təklif edirik: avtomatik aylıq ödəniş (bank və ya kartla), müştəri portalımız vasitəsilə onlayn ödəniş və ya ofisimizə göndərilən çek/pul köçürməsi. Kommersiya hesabları üçün 30 günə qədər ödəniş şərtləri mümkündür.
+                </div>
+            </div>
+            
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 pb-4">
+                <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-green-600 focus:outline-none">
+                    <span>Zibil yığım günüm bayrama düşərsə nə baş verir?</span>
+                    <i class="fas fa-chevron-down text-green-600 ml-2 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer mt-2 text-gray-600 hidden">
+                    Əsas bayram günlərində xidmətlər bir gün gecikdirilir. Məsələn, əgər sizin yığım gününüz bazar ertəsidir və həmin gün bayramdırsa, yığım çərşənbə axşamı olacaq. Dəqiq tarixlər üçün saytımızdakı bayram cədvəlinə baxın.
+                </div>
+            </div>
+            
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 pb-4">
+                <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-green-600 focus:outline-none">
+                    <span>Zibil qabı və ya konteyneri necə sifariş edə bilərəm?</span>
+                    <i class="fas fa-chevron-down text-green-600 ml-2 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer mt-2 text-gray-600 hidden">
+                    Ehtiyaclarınızı müzakirə etmək üçün müştəri xidmətimizlə əlaqə saxlayın. Sizin üçün uyğun ölçüdə konteyner seçməyə və çatdırılmanı rahat vaxtda təşkil etməyə kömək edəcəyik. Məişət müştəriləri üçün standart qablar adətən 3 iş günü ərzində çatdırılır.
+                </div>
+            </div>
+            
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 pb-4">
+                <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-green-600 focus:outline-none">
+                    <span>Ləğv etmə siyasətiniz necədir?</span>
+                    <i class="fas fa-chevron-down text-green-600 ml-2 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer mt-2 text-gray-600 hidden">
+                    Məişət hesabları üçün ləğv barədə 14 gün əvvəl xəbərdarlıq tələb olunur. Kommersiya hesablarında müqaviləyə əsasən fərqli şərtlər ola bilər. Konteyner icarəsində, çatdırılmadan 24 saatdan az əvvəl ləğv olunsa, cərimə tətbiq oluna bilər.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white pt-12 pb-6">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <!-- Column 1 -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-trash-alt text-3xl text-green-400 mr-2"></i>
+                    <span class="font-semibold text-2xl">Galaktika</span>
+                </div>
+                <p class="text-gray-400 mb-4">Ətraf mühitə məsuliyyət və müştəri məmnuniyyəti ilə peşəkar tullantı idarəçiliyi xidmətləri.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-green-400">Sürətli keçidlər</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition">Əsas</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-white transition">Xidmətlər</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition">Əlaqə</a></li>
+                    <li><a href="#quote" class="text-gray-400 hover:text-white transition">Təklif alın</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Tez-tez verilən suallar</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-green-400">Xidmətlər</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Məişət tullantılarının yığılması</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Toplu tullantılar</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Lazımsız əşyaların çıxarılması</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-green-400">Bülleten</h3>
+                <p class="text-gray-400 mb-4">Tullantı idarəçiliyi üzrə məsləhətlər və xüsusi təkliflər üçün bülletenimizə abunə olun.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Email adresiniz" class="px-4 py-2 w-full text-gray-900 rounded-l-lg focus:outline-none">
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 px-4 rounded-r-lg">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Galaktika . Bütün hüquqlar qorunur.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white text-sm transition">Gizlilik Siyasəti</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm transition">Xidmət Şərtləri</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm transition">Sayt xəritəsi</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hidden items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('flex');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('flex');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
