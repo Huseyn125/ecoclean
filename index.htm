@@ -5,32 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoClean Waste Solutions | Professional Waste Removal Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Custom CSS */
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601044777204-c80b9a5408a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 100, 0, 0.1);
-        }
-        
-        .service-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        
-        #map {
-            height: 400px;
-        }
-    </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
@@ -196,7 +172,7 @@
                             <span class="text-gray-600">Eyni gün xidmət mümkündür</span>
                         </li>
                     </ul>
-                    <a href="#quote" class="text-green-600 font-semibold inline-flex items-center">SXidməti Planlaşdır <i class="fas fa-arrow-right ml-2"></i></a>
+                    <a href="#quote" class="text-green-600 font-semibold inline-flex items-center">Xidməti Planlaşdır <i class="fas fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>
@@ -279,7 +255,7 @@
             <h2 class="text-3xl font-bold text-white mb-4">Rahat Tullantı İdarəçiliyinə Hazırsınız?</h2>
             <p class="text-xl text-green-100 mb-8">Bu gün pulsuz təklif alın. Heç bir öhdəlik yoxdur, yalnız əla xidmət seçimləri.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:18005551234" class="bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-6 rounded-lg transition duration-300">
+                <a href="tel:1994552868615" class="bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-6 rounded-lg transition duration-300">
                     <i class="fas fa-phone mr-2"></i> İndi Zəng Edin
                 </a>
                 <a href="#contact" class="bg-transparent hover:bg-green-700 text-white hover:text-white font-semibold py-3 px-6 border border-white hover:border-transparent rounded-lg transition duration-300">
@@ -355,7 +331,7 @@
             <div>
                 <h3 class="text-xl font-semibold mb-6 text-green-600">Bizə Mesaj Yazın</h3>
                 
-                <form class="space-y-4">
+                <form action="https://formspree.io/f/xdkyngwv" method="POST" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Ad</label>
@@ -536,70 +512,6 @@
     <button id="backToTop" class="fixed bottom-8 right-8 bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hidden items-center justify-center">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // FAQ accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                // Toggle answer visibility
-                answer.classList.toggle('hidden');
-                
-                // Rotate icon
-                icon.classList.toggle('transform');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-        
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 200) {
-                backToTopButton.classList.remove('hidden');
-                backToTopButton.classList.add('flex');
-            } else {
-                backToTopButton.classList.add('hidden');
-                backToTopButton.classList.remove('flex');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
