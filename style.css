@@ -26,7 +26,7 @@
     --dark-shadow-lg: rgba(0, 0, 0, 0.35);
     --dark-service-card-bg: #0f172a;
     --dark-service-card-shadow: rgba(0, 0, 0, 0.45);
-    --nav-link: #ffffff;
+    --nav-link: #4b5563;
     --nav-link-hover: #16a34a;
     --nav-link-active: #16a34a;
     --nav-link-active-border: #16a34a;
@@ -179,6 +179,10 @@ body.dark-mode .hover\:bg-gray-100:hover {
 
 .nav-link:hover {
     color: var(--nav-link-hover);
+}
+
+body.dark-mode .nav-link {
+    color: var(--dark-body-text);
 }
 
 .nav-link-active {
