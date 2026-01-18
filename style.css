@@ -33,7 +33,7 @@
 }
 
 .hero {
-    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.jpg?b=1&s=1024x1024&w=0&k=20&c=dtcENsGbWYvnhf0XkxUNtirDEzrmmJTCmgLLVT4mD4Q=');
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
