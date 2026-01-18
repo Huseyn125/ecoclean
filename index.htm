@@ -52,18 +52,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#home" class="py-4 px-2 text-green-600 border-b-4 border-green-600 font-semibold">Əsas</a>
-                    <a href="#services" class="py-4 px-2 text-gray-600 font-semibold hover:text-green-600 transition duration-300">Xidmətlər</a>
-                    <a href="#contact" class="py-4 px-2 text-gray-600 font-semibold hover:text-green-600 transition duration-300">Əlaqə</a>
-                    <a href="#quote" class="py-2 px-4 mx-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">Təklif alın</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                <div class="flex items-center space-x-3">
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#home" class="nav-link py-4 px-2 font-semibold transition duration-300">Əsas</a>
+                        <a href="#services" class="nav-link py-4 px-2 font-semibold transition duration-300">Xidmətlər</a>
+                        <a href="#contact" class="nav-link py-4 px-2 font-semibold transition duration-300">Əlaqə</a>
+                        <a href="#quote" class="py-2 px-4 mx-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">Təklif alın</a>
+                    </div>
+                    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun"><i class="fas fa-sun"></i></span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon"><i class="fas fa-moon"></i></span>
+                        <span class="theme-toggle__thumb"></span>
                     </button>
+                    <div class="md:hidden flex items-center">
+                        <button class="outline-none mobile-menu-button" aria-label="Toggle menu">
+                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
