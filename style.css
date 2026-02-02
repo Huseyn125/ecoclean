@@ -189,3 +189,39 @@ body.dark-mode .nav-link {
     color: var(--nav-link-active);
     border-bottom-color: var(--nav-link-active-border);
 }
+/* Dark mode form styles */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="tel"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: var(--dark-bg-gray-100);
+    color: var(--dark-body-text);
+    border-color: var(--dark-border-200);
+}
+
+body.dark-mode input[type="text"]::placeholder,
+body.dark-mode input[type="email"]::placeholder,
+body.dark-mode input[type="tel"]::placeholder,
+body.dark-mode textarea::placeholder {
+    color: var(--dark-text-400);
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="tel"]:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    background-color: var(--dark-bg-gray-100);
+    color: var(--dark-body-text);
+    border-color: #16a34a;
+}
+
+body.dark-mode label {
+    color: var(--dark-text-700);
+}
+
+body.dark-mode select option {
+    background-color: var(--dark-bg-gray-100);
+    color: var(--dark-body-text);
+}
